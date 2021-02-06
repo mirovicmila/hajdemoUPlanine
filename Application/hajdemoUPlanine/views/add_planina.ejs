@@ -1,0 +1,20 @@
+<%- include ('./layout') %>
+<h3>Dodaj planinu</h3>
+<form action= "/planine/add" method="POST">
+  <input type="hidden" name="id" value="" />
+    <input type="text" name="imePlanine" placeholder="Ime planine" />
+    <br />
+    <input type="text" name="region" placeholder="Region" />
+    <br />
+    <input type="text" name="lokacija" placeholder="Lokacija" />
+    <br />
+    <input type="text" name="slika" placeholder="Slika" />
+    <br />
+    <small class="text-muted">Dodajete planinu...</small>
+    <br />
+  <input
+    type="submit"
+    value="Dodaj planinu"
+    class="btn btn-outline-primary btn-sm"
+  />
+</form>

@@ -1,0 +1,133 @@
+<%- include ('./layout') %>
+<div style="background-color: aliceblue;">
+<div class="mx-5">
+<h1 class="display-4">Smeštaji</h1>
+    <a href= "/smestaji/add"><button class="btn btn-success">Dodaj smeštaj</button></a>
+    <form action= '/' method="POST">
+        <div class="table-responsive">
+        <table class="table table-bordered">
+           <thead class="thead-light">
+               <tr>
+                   <th scope="col">RBR</th>
+                   <th scope="col">Ime smeštaja</th>
+                   <th scope="col">Tip smeštaja</th>
+                   <th scope="col">Adresa</th>
+                   <th scope="col">Kategorija</th>
+                   <th scope="col">Udaljenost od centra</th>
+                   <th scope="col">Prosečna cena po noći</th>
+                   <th scope="col">Akcije</th>
+               </tr>
+           </thead>
+           <tbody>
+            <% for(var i=0; i< smestaji.length;i++) { %>
+                <tr>
+                    <th scope="row"><%= i+1 %></th>
+                    <td><a href="/smestaj/<%= smestaji[i]._id%>"><%= smestaji[i].imeSmestaja %></a></td>
+                    <td><%= smestaji[i].tipSmestaja %></td>
+                    <td><%= smestaji[i].adresa %></td>
+                    <td><%= smestaji[i].kategorija %></td>
+                    <td><%= smestaji[i].udaljenostOdCentra %></td>
+                    <td><%= smestaji[i].prosecnaCenaPoNoci %></td>
+                    <td class="d-flex flex-row">
+                        <a href="/smestaji/edit/<%= smestaji[i]._id%>" class="btn update btn-outline-primary mx-1">
+                         Izmeni 
+                        </a>
+                        <a class="btn btn-outline-danger delete-smestaj mx-1" data-id=<%= smestaji[i]._id%>>
+                         Obriši
+                        </a>
+                    </td>
+                </tr>
+                <br/>
+            <%} %>
+           </tbody>
+        </table>
+        </div>
+    </form>
+    <div>
+        <h1 class="display-4">Planine</h1>
+        <a href= "/planine/add" class="btn btn-success">Dodaj planinu</a>
+        <form action= '/' method="POST">
+            <div class="table-responsive">
+            <table class="table table-bordered">
+               <thead class="thead-light">
+                   <tr>
+                       <th scope="col">RBR</th>
+                       <th scope="col">Ime planine</th>
+                       <th scope="col">Region</th>
+                       <th scope="col">Lokacija</th>
+                       <th scope="col">Akcija</th>
+                   </tr>
+               </thead>
+               <tbody>
+                <% for(var i=0; i< planine.length;i++) { %>
+                    <tr>
+                        <th scope="row"><%= i+1 %></th>
+                        <td><a href="/planina/<%= planine[i]._id%>"><%= planine[i].imePlanine %></a></td>
+                        <td><%= planine[i].region %></td>
+                        <td><%= planine[i].lokacija %></td>
+                        <td class="d-flex flex-row">
+                            <a href="/planine/edit/<%= planine[i]._id%>" class="btn update btn-outline-primary mx-1">
+                             Izmeni 
+                            </a>
+                            <a class="btn btn-outline-danger delete-planina mx-1" data-id=<%= planine[i]._id%>>
+                             Obriši
+                            </a>
+                        </td>
+                    </tr>
+                    <br/>
+                <%} %>
+               </tbody>
+            </table>
+            </div>
+        </form>
+    </div>
+    <div>
+        <h1 class="display-4">Atrakcije</h1>
+        <a href= "/atrakcije/add" class="btn btn-success">Dodaj atrakciju</a>
+        <form action= '/' method="POST">
+            <div class="table-responsive">
+            <table class="table table-bordered">
+               <thead class="thead-light">
+                   <tr>
+                       <th scope="col">RBR</th>
+                       <th scope="col">Ime atrakcije</th>
+                       <th scope="col">Lokacija</th>
+                       <th scope="col">Cena</th>
+                       <th scope="col">Radno vreme</th>
+                       <th scope="col">Kontakt</th>
+                       <th scope="col">Veb lokacija</th>
+                       <th scope="col">Planina</th>
+                       <th scope="col">Akcije</th>
+                   </tr>
+               </thead>
+               <tbody>
+                <% for(var i=0; i< atrakcije.length;i++) { %>
+                    <tr>
+                        <th scope="row"><%= i+1 %></th>
+                        <td><a href="/atrakcija/<%= atrakcije[i]._id%>"><%= atrakcije[i].imeAtrakcije %></a></td>
+                        <td><%= atrakcije[i].lokacija %></td>
+                        <td><%= atrakcije[i].cena %></td>
+                        <td><%= atrakcije[i].radnoVreme %></td>
+                        <td><%= atrakcije[i].kontakt %></td>
+                        <td><%= atrakcije[i].vebLokacija %></td>
+                        <td><%= atrakcije[i].planina %></td>
+                        <td class="d-flex flex-row">
+                            <a href="/atrakcije/edit/<%= atrakcije[i]._id%>" class="btn update btn-outline-primary mx-1">
+                             Izmeni 
+                            </a>
+                            <a class="btn btn-outline-danger delete-atrakcija mx-1" data-id=<%= atrakcije[i]._id%>>
+                             Obriši
+                            </a>
+                        </td>
+                    </tr>
+                    <br/>
+                <%} %>
+               </tbody>
+            </table>
+            </div>
+        </form>
+        <div>
+
+</div>
+</div>
+

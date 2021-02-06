@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/mountain.png"/> 
+    <title>Hajdemo u planine</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://icons8.com/icon/65471/mountain"/>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script
+  src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+  integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+  crossorigin=""
+></script>
+<script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+<link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+    <script src="/js/main.js"> </script>
+    </head>
+  <body class="" style="background-color: #98c8d6;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info sticky-top">
+      <a class="navbar-brand" href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g><path d="M39.41667,75.25c-1.032,0 -2.06042,0.54108 -2.59792,1.60892l-36.81875,73.64108h78.83333l-36.81875,-73.64108c-0.5375,-1.06783 -1.56592,-1.60892 -2.59792,-1.60892zM144.0715,109.20208l-22.23817,41.29792h50.16667l-22.23817,-41.29792c-0.60917,-1.13233 -1.72717,-1.70208 -2.84517,-1.70208c-1.118,0 -2.236,0.56975 -2.84517,1.70208z" fill="#90a4ae"></path><path d="M154.08333,150.5h-129l34.873,-71.66667l15.29367,-21.5h28.66667l16.77,24.54583z" fill="#546e7a"></path><path d="M120.92317,82.41667l-9.83983,-7.16667l3.58333,25.08333l-21.5,-39.41667l-10.75,25.08333l-7.16667,-21.5l-15.29367,14.33333l15.29367,-31.42583l11.61,-24.295c0.14333,-0.28667 0.35833,-0.5375 0.57333,-0.7525c0.60917,-0.57333 1.36167,-0.86 2.11417,-0.86c0.9675,0 1.89917,0.46583 2.43667,1.32583c0.1075,0.1075 0.14333,0.215 0.215,0.3225z" fill="#ffffff"></path></g></g></svg>
+        Hajdemo u planine</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Glavna stranica <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-link nav-link" onClick="document.getElementById('planine').scrollIntoView();">Planine Srbije</button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-link btn btn-link" onClick="document.getElementById('atrakcije').scrollIntoView();">Atrakcije</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-link nav-link" onClick="document.getElementById('smestaji').scrollIntoView();">Smeštaj</button>
+          </li>
+        </ul>
+      </div>
+    </nav><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

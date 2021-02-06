@@ -1,0 +1,32 @@
+<%- include ('./layout') %>
+<h3>Izmeni smestaj</h3>
+<form action= "/smestaji/edit/<%= smestaj._id%>" method="POST">
+    <input type="hidden" name="id" value="<%= smestaj._id%>" />
+    <input type="text" name="imeSmestaja" placeholder="Ime smestaja" value="<%= smestaj.imeSmestaja%>"/>
+    <br />
+    <input type="text" name="tipSmestaja" placeholder="Tip smestaja" value="<%= smestaj.tipSmestaja%>" />
+    <br />
+    <input type="text" name="opis" placeholder="Opis" value="<%= smestaj.opis%>"/>
+    <br />
+    <input type="text" name="planina" placeholder="Planina na kojoj se nalazi" value="<%= smestaj.planina%>"/>
+    <br />
+    <input type="text" name="kontakt" placeholder="Kontakt" value="<%= smestaj.kontakt%>"/>
+    <br />
+    <input type="text" name="adresa" placeholder="Adresa" value="<%= smestaj.adresa%>" />
+    <br />
+    <input type="text" name="kategorija" placeholder="Kategorija" value="<%= smestaj.kategorija%>" />
+    <br />
+    <input type="text" name="udaljenostOdCentra" placeholder="Udaljenost od centra" value="<%= smestaj.udaljenostOdCentra%>" />
+    <br />
+    <input type="text" name="prosecnaCenaPoNoci" placeholder="Prosecna cena po noci" value="<%= smestaj.prosecnaCenaPoNoci%>" />
+    <br />
+    <input type="text" name="slika" placeholder="Slika" value="<%= smestaj.slika%>"/>
+    <br />
+    <small class="text-muted">Izmenite smestaj...</small>
+    <br />
+  <input
+    type="submit"
+    value="Izmeni smestaj"
+    class="btn btn-outline-primary btn-sm"
+  />
+</form>

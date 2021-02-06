@@ -1,0 +1,32 @@
+<%- include ('./layout') %>
+<h3>Dodaj smestaj</h3>
+<form action= "/smestaji/add" method="POST">
+  <input type="hidden" name="id" value="" />
+    <input type="text" name="imeSmestaja" placeholder="Ime smestaja" />
+    <br />
+    <input type="text" name="opis" placeholder="Opis smestaja" />
+    <br />
+    <input type="text" name="planina" placeholder="Planina na kojoj se nalazi" />
+    <br />
+    <input type="text" name="kontakt" placeholder="Kontakt" />
+    <br />
+    <input type="text" name="tipSmestaja" placeholder="Tip smestaja" />
+    <br />
+    <input type="text" name="adresa" placeholder="Adresa" />
+    <br />
+    <input type="text" name="kategorija" placeholder="Kategorija" />
+    <br />
+    <input type="text" name="udaljenostOdCentra" placeholder="Udaljenost od centra" />
+    <br />
+    <input type="text" name="prosecnaCenaPoNoci" placeholder="Prosecna cena po noci" />
+    <br />
+    <input type="text" name="slika" placeholder="Slika" />
+    <br />
+    <small class="text-muted">Dodajete smestaj...</small>
+    <br />
+  <input
+    type="submit"
+    value="Dodaj smestaj"
+    class="btn btn-outline-primary btn-sm"
+  />
+</form>

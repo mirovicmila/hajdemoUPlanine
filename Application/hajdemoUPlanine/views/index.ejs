@@ -1,0 +1,139 @@
+<%- include ('./layout') %>
+<div class="jumbotron hero-image d-flex flex-column">
+  <h1 class="display-1 text-light">Dobrodošli!</h1>
+  <hr>
+  <p class="text-light">Ovde možete pronaći sve potrebne informacije o planinama Srbije, nezaobilaznim atrakcijama u njihovoj neposrednoj blizini i smeštajnim kapacitetima na njima.</p>
+  <div style="height:300px;"></div>
+  <a class="mx-auto"><button class="btn btn-outline-light btn-lg" href="#" role="button"
+    onClick="document.getElementById('planine').scrollIntoView();"
+    ><i class="fa fa-angle-down" aria-hidden="true"></i></button></a>
+</div>
+
+<div style="height:100px;" id="planine"></div>
+
+
+<div class="d-flex flex-row mx-4 justify-content-end">
+  <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="96" height="96" viewBox="0 0 172 172"
+style=" fill:#000000;"><g transform=""><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><path d="" fill="none"></path><g><path d="M39.41667,75.25c-1.032,0 -2.06042,0.54108 -2.59792,1.60892l-36.81875,73.64108h78.83333l-36.81875,-73.64108c-0.5375,-1.06783 -1.56592,-1.60892 -2.59792,-1.60892zM144.0715,109.20208l-22.23817,41.29792h50.16667l-22.23817,-41.29792c-0.60917,-1.13233 -1.72717,-1.70208 -2.84517,-1.70208c-1.118,0 -2.236,0.56975 -2.84517,1.70208z" fill="#95a5a6"></path><path d="M154.08333,150.5h-129l34.873,-71.66667l15.29367,-21.5h28.66667l16.77,24.54583z" fill="#546e7a"></path><path d="M120.92317,82.41667l-9.83983,-7.16667l3.58333,25.08333l-21.5,-39.41667l-10.75,25.08333l-7.16667,-21.5l-15.29367,14.33333l15.29367,-31.42583l11.61,-24.295c0.14333,-0.28667 0.35833,-0.5375 0.57333,-0.7525c0.60917,-0.57333 1.36167,-0.86 2.11417,-0.86c0.9675,0 1.89917,0.46583 2.43667,1.32583c0.1075,0.1075 0.14333,0.215 0.215,0.3225z" fill="#ecf0f1"></path></g></g></g></svg>
+
+<h1  class="mx-5 display-3">Planine Srbije</h1>
+</div>
+<br />
+<p class="text-justify mx-5 px-5">
+  Prekrivene gustim šumama i zelenim livadama, ispresecane brzim rekama i bistrim jezerima, planine Srbije idealno su mesto za odmor i razonodu u svako doba godine. 
+
+Zimi pružaju idealnu priliku za rekreaciju na brojnim ski-stazama opremljenim modernim žičarama i ski-liftovima. Leti nude izbor između već dobro utabanih i uređenih pešačkih i biciklističkih staza, brojnih sportskih terena, jahanja i paraglajdinga. Na njima živi na hiljade biljnih i životinjskih vrsta od kojih su neke ugrožene u evropskim i svetskim okvirima. One zajedno stvaraju jedinstvene ekosisteme koji izazivaju divljenje i blagotvorno utiču na zdravlje posetilaca.
+Zbog prijatne klime i vazduha obogaćenog jodom, brojne planine u Srbiji proglašene su vazdušnim banjama. Kulturno-istorijski spomenici na planinama, koji datiraju od antičkog doba do danas, čine boravak na srpskim planinama nezaboravnim iskustvom koje pored tela okrepljuje i duh.
+Bez obzira da li više volite uzbudljiv, sportskim aktivnostima ispunjen odmor, ili miran predah od svakodnevice uz opuštanje u prirodi, planinski centri u Srbiji pružiće vam odmor kakav priželjkujete.
+</p>
+<br />
+
+<div class="row row-cols-1 row-cols-md-3 g-4 mx-4 d-flex flex-wrap justify-content-around">
+<% planine.forEach(function(planina){ %>
+        <div class="card bg-transparent border-0 text-white m-4" style="max-width:600px;max-height: 300px;">
+          <img src="<%= planina.slika%>" class="card-img-top cropped2 rounded" alt="...">
+          <div class="card-img-overlay">
+            <div style="height:100px;"></div>
+            <a href="/planina/<%= planina._id%>" class="stretched-link text-light"></a>
+            <p class="display-4"><%= planina.imePlanine %></p>
+          </div>
+        </div>
+<% }) %>
+</div>
+<br/>
+
+<div style="height:100px;" id="atrakcije"></div>
+
+<div class="d-flex flex-row mx-4">
+<img src="https://img.icons8.com/doodle/96/000000/parachute--v1.png"/>
+<h1 class="display-3 mx-4">Atrakcije</h1>
+</div>
+<br />
+<div class="row row-cols-1 row-cols-md-3 g-4 mx-4 d-flex flex-wrap justify-content-around">
+<% atrakcije.forEach(function(atrakcija){ %> 
+  <div class="card bg-transparent border-0 text-white m-4" style="max-width:600px;max-height: 300px;">
+    <img src="<%= atrakcija.slika%>" class="card-img-top img-fluid cropped1" alt="...">
+    <div class="card-img-overlay bg-info mx-3 d-flex flex-column justify-content-end" style="height:70%;width:45%;" >
+      <h5 class="card-title"><i class="fas fa-hotel"></i> <%= atrakcija.imeAtrakcije %></h5>
+      <p class="card-text"><small><i class="fas fa-phone"></i>  <%= atrakcija.kontakt%></small></p>
+      <div class="d-flex flex-row">
+      <p class="card-text"><small class="text-light"><i class="fas fa-map-signs"></i>  <%= atrakcija.planina%></small></p>
+      <a href="/atrakcija/<%= atrakcija._id%>" class="stretched-link mx-3 my-1"><i class="fa fa-arrow-right text-light" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+<% }) %>
+</div>
+
+<div style="height:100px;" id="smestaji"></div>
+
+<div class="d-flex flex-row mx-4 justify-content-end">
+  <img src="https://img.icons8.com/color/96/000000/5-star-hotel.png"/>
+<h1 class="display-3 mx-4">Smeštaji</h1>
+</div>
+<br/>
+<div class="row row-cols-1 row-cols-md-3 g-4 mx-4 d-flex flex-wrap">
+<% smestaji.forEach(function(smestaj){ %>  
+        <div class="col">
+            <div class="card border-0" style="background-color: #bfd1e0;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <img src="<%= smestaj.slika%>" class="card-img-top rounded-lg p-2" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><i class="fas fa-hotel"></i> <%= smestaj.imeSmestaja %></h5>
+              <p class="card-text"><i class="fas fa-phone"></i>  <%= smestaj.kontakt%></p>
+              <p class="card-text"><i class="fas fa-map-signs"></i>  <%= smestaj.udaljenostOdCentra%>m od centra</p>
+              <a href="/smestaj/<%= smestaj._id%>" class="stretched-link"> </a>
+            </div>
+          </div>
+        </div>
+<% }) %>
+</div>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<style>
+  .hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://monix.rs/wp-content/uploads/2017/04/Uvac.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.card:hover{
+  filter: brightness(80%);
+  box-shadow: 0 4px 8px 0 #4361ee, 0 6px 20px 0 #eaf4f8;
+}
+
+.tekst {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cropped1 {
+    width: 600px; /* width of container */
+    height: 300px; /* height of container */
+    object-fit: cover;
+    /* filter: brightness(50%); */
+}
+
+.cropped2 {
+    width: 600px; /* width of container */
+    height: 300px; /* height of container */
+    object-fit: cover;
+    filter: brightness(80%);
+}
+
+</style>
+
+
+
+
+
+

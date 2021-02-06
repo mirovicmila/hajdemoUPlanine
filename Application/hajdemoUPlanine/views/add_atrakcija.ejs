@@ -1,0 +1,32 @@
+<%- include ('./layout') %>
+<h3>Dodaj atrakciju</h3>
+<form action= "/atrakcije/add" method="POST">
+  <input type="hidden" name="id" value="" />
+    <input type="text" name="imeAtrakcije" placeholder="Ime atrakcije" />
+    <br />
+    <input type="text" name="opis" placeholder="Opis atrakcije" />
+    <br />
+    <input type="text" name="planina" placeholder="Planina na kojoj se nalazi" />
+    <br />
+    <input type="text" name="cena" placeholder="Cena" />
+    <br />
+    <input type="text" name="kontakt" placeholder="Kontakt" />
+    <br />
+    <input type="text" name="radnoVreme" placeholder="Radno vreme" />
+    <br />
+    <input type="text" name="lokacija" placeholder="Lokacija" />
+    <br />
+    <input type="text" name="slika" placeholder="Slika" />
+    <br />
+    <input type="text" name="video" placeholder="Video" />
+    <br />
+    <input type="text" name="vebLokacija" placeholder="Veb lokacija" />
+    <br />
+    <small class="text-muted">Dodajete atrakciju...</small>
+    <br />
+  <input
+    type="submit"
+    value="Dodaj atrakciju"
+    class="btn btn-outline-primary btn-sm"
+  />
+</form>

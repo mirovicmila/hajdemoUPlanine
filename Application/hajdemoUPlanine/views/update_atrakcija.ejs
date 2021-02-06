@@ -1,0 +1,32 @@
+<%- include ('./layout') %>
+<h3>Izmeni atrakciju</h3>
+<form action= "/atrakcije/edit/<%= atrakcija._id%>" method="POST">
+    <input type="hidden" name="id" value="<%= atrakcija._id%>" />
+    <input type="text" name="imeAtrakcije" placeholder="Ime atrakcije" value="<%= atrakcija.imeAtrakcije%>"/>
+    <br />
+    <input type="text" name="opis" placeholder="Opis" value="<%= atrakcija.opis%>" />
+    <br />
+    <input type="text" name="cena" placeholder="Cena" value="<%= atrakcija.cena%>"/>
+    <br />
+    <input type="text" name="radnoVreme" placeholder="Radno vreme" value="<%= atrakcija.radnoVreme%>"/>
+    <br />
+    <input type="text" name="planina" placeholder="Planina na kojoj se nalazi" value="<%= atrakcija.planina%>"/>
+    <br />
+    <input type="text" name="kontakt" placeholder="Kontakt" value="<%= atrakcija.kontakt%>"/>
+    <br />
+    <input type="text" name="lokacija" placeholder="Lokacija" value="<%= atrakcija.lokacija%>" />
+    <br />
+    <input type="text" name="vebLokacija" placeholder="Veb Lokacija" value="<%= atrakcija.vebLokacija%>" />
+    <br />
+    <input type="text" name="slika" placeholder="Slika" value="<%= atrakcija.slika%>"/>
+    <br />
+    <input type="text" name="video" placeholder="Video" value="<%= atrakcija.video%>"/>
+    <br />
+    <small class="text-muted">Izmenite atrakciju...</small>
+    <br />
+  <input
+    type="submit"
+    value="Izmeni atrakciju"
+    class="btn btn-outline-primary btn-sm"
+  />
+</form>
