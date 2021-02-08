@@ -1,20 +1,25 @@
 <%- include ('./layout') %>
-<h3>Dodaj planinu</h3>
-<form action= "/planine/add" method="POST">
+<div class="d-flex flex-row flex-wrap justify-content-around h-100 bg-info" >
+<div class="d-flex flex-column">
+<h3 class="text-light display-4">Dodaj planinu</h3>
+<form action= "/planine/add" method="POST" class="mx-auto my-auto">
   <input type="hidden" name="id" value="" />
-    <input type="text" name="imePlanine" placeholder="Ime planine" />
+    <input type="text" name="imePlanine" placeholder="Ime planine" required />
     <br />
-    <input type="text" name="region" placeholder="Region" />
+    <input type="text" name="region" placeholder="Region"required />
     <br />
-    <input type="text" name="lokacija" placeholder="Lokacija" />
+    <input type="text" name="lokacija" placeholder="Lokacija" required />
     <br />
-    <input type="text" name="slika" placeholder="Slika" />
+    <input type="text" name="slika" placeholder="Slika" required />
     <br />
-    <small class="text-muted">Dodajete planinu...</small>
+    <small class="text-light">Dodajete planinu...</small>
     <br />
   <input
     type="submit"
     value="Dodaj planinu"
-    class="btn btn-outline-primary btn-sm"
+    class="btn btn-outline-light btn-sm w-100"
   />
 </form>
+</div>
+<img src="https://cdn.dribbble.com/users/1107982/screenshots/14906495/media/cf0b1a2325fcb3757e6f030bd6359240.png?compress=1&resize=1000x750" class="img-fluid"/>
+</div>

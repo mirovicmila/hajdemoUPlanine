@@ -75,7 +75,7 @@ Bez obzira da li više volite uzbudljiv, sportskim aktivnostima ispunjen odmor, 
 <div class="row row-cols-1 row-cols-md-3 g-4 mx-4 d-flex flex-wrap">
 <% smestaji.forEach(function(smestaj){ %>  
         <div class="col">
-            <div class="card border-0" style="background-color: #bfd1e0;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <div class="card border-0 m-2" style="background-color: #bfd1e0;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); min-width: 180px;">
             <img src="<%= smestaj.slika%>" class="card-img-top rounded-lg p-2" alt="...">
             <div class="card-body">
               <h5 class="card-title"><i class="fas fa-hotel"></i> <%= smestaj.imeSmestaja %></h5>

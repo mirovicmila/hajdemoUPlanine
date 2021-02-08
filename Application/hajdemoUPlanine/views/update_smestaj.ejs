@@ -1,32 +1,32 @@
 <%- include ('./layout') %>
-<h3>Izmeni smestaj</h3>
-<form action= "/smestaji/edit/<%= smestaj._id%>" method="POST">
+<h3 class="display-4 mx-5">Izmeni smestaj</h3>
+<form action= "/smestaji/edit/<%= smestaj._id%>" method="POST" class="mx-5">
     <input type="hidden" name="id" value="<%= smestaj._id%>" />
-    <input type="text" name="imeSmestaja" placeholder="Ime smestaja" value="<%= smestaj.imeSmestaja%>"/>
+    <input type="text" name="imeSmestaja" placeholder="Ime smestaja" value="<%= smestaj.imeSmestaja%>" class="w-100"/>
     <br />
-    <input type="text" name="tipSmestaja" placeholder="Tip smestaja" value="<%= smestaj.tipSmestaja%>" />
+    <input type="text" name="tipSmestaja" placeholder="Tip smestaja" value="<%= smestaj.tipSmestaja%>" class="w-100" />
     <br />
-    <input type="text" name="opis" placeholder="Opis" value="<%= smestaj.opis%>"/>
+    <input type="text" name="opis" placeholder="Opis" value="<%= smestaj.opis%>" class="w-100"/>
     <br />
-    <input type="text" name="planina" placeholder="Planina na kojoj se nalazi" value="<%= smestaj.planina%>"/>
+    <input type="text" name="planina" placeholder="Planina na kojoj se nalazi" value="<%= smestaj.planina%>" class="w-100"/>
     <br />
-    <input type="text" name="kontakt" placeholder="Kontakt" value="<%= smestaj.kontakt%>"/>
+    <input type="text" name="kontakt" placeholder="Kontakt" value="<%= smestaj.kontakt%>" class="w-100"/>
     <br />
-    <input type="text" name="adresa" placeholder="Adresa" value="<%= smestaj.adresa%>" />
+    <input type="text" name="adresa" placeholder="Adresa" value="<%= smestaj.adresa%>" class="w-100"/>
     <br />
-    <input type="text" name="kategorija" placeholder="Kategorija" value="<%= smestaj.kategorija%>" />
+    <input type="text" name="kategorija" placeholder="Kategorija" value="<%= smestaj.kategorija%>" class="w-100"/>
     <br />
-    <input type="text" name="udaljenostOdCentra" placeholder="Udaljenost od centra" value="<%= smestaj.udaljenostOdCentra%>" />
+    <input type="text" name="udaljenostOdCentra" placeholder="Udaljenost od centra" value="<%= smestaj.udaljenostOdCentra%>" class="w-100" />
     <br />
-    <input type="text" name="prosecnaCenaPoNoci" placeholder="Prosecna cena po noci" value="<%= smestaj.prosecnaCenaPoNoci%>" />
+    <input type="text" name="prosecnaCenaPoNoci" placeholder="Prosecna cena po noci" value="<%= smestaj.prosecnaCenaPoNoci%>" class="w-100" />
     <br />
-    <input type="text" name="slika" placeholder="Slika" value="<%= smestaj.slika%>"/>
+    <input type="text" name="slika" placeholder="Slika" value="<%= smestaj.slika%>" class="w-100"/>
     <br />
     <small class="text-muted">Izmenite smestaj...</small>
     <br />
   <input
     type="submit"
     value="Izmeni smestaj"
-    class="btn btn-outline-primary btn-sm"
+    class="btn btn-outline-light btn-sm w-100"
   />
 </form>

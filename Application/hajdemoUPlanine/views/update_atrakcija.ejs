@@ -1,32 +1,34 @@
 <%- include ('./layout') %>
-<h3>Izmeni atrakciju</h3>
-<form action= "/atrakcije/edit/<%= atrakcija._id%>" method="POST">
+<div class="mx-auto">
+<h3 class="display-4 mx-5">Izmeni atrakciju</h3>
+<form action= "/atrakcije/edit/<%= atrakcija._id%>" method="POST" class="mx-5">
     <input type="hidden" name="id" value="<%= atrakcija._id%>" />
-    <input type="text" name="imeAtrakcije" placeholder="Ime atrakcije" value="<%= atrakcija.imeAtrakcije%>"/>
+    <input type="text" name="imeAtrakcije" placeholder="Ime atrakcije" value="<%= atrakcija.imeAtrakcije%>" class="w-100"/>
     <br />
-    <input type="text" name="opis" placeholder="Opis" value="<%= atrakcija.opis%>" />
+    <input type="text" name="opis" placeholder="Opis" value="<%= atrakcija.opis%>" class="w-100" />
     <br />
-    <input type="text" name="cena" placeholder="Cena" value="<%= atrakcija.cena%>"/>
+    <input type="text" name="cena" placeholder="Cena" value="<%= atrakcija.cena%>" class="w-100"/>
     <br />
-    <input type="text" name="radnoVreme" placeholder="Radno vreme" value="<%= atrakcija.radnoVreme%>"/>
+    <input type="text" name="radnoVreme" placeholder="Radno vreme" value="<%= atrakcija.radnoVreme%>" class="w-100"/>
     <br />
-    <input type="text" name="planina" placeholder="Planina na kojoj se nalazi" value="<%= atrakcija.planina%>"/>
+    <input type="text" name="planina" placeholder="Planina na kojoj se nalazi" value="<%= atrakcija.planina%>" class="w-100"/>
     <br />
-    <input type="text" name="kontakt" placeholder="Kontakt" value="<%= atrakcija.kontakt%>"/>
+    <input type="text" name="kontakt" placeholder="Kontakt" value="<%= atrakcija.kontakt%>" class="w-100"/>
     <br />
-    <input type="text" name="lokacija" placeholder="Lokacija" value="<%= atrakcija.lokacija%>" />
+    <input type="text" name="lokacija" placeholder="Lokacija" value="<%= atrakcija.lokacija%>" class="w-100" />
     <br />
-    <input type="text" name="vebLokacija" placeholder="Veb Lokacija" value="<%= atrakcija.vebLokacija%>" />
+    <input type="text" name="vebLokacija" placeholder="Veb Lokacija" value="<%= atrakcija.vebLokacija%>" class="w-100" />
     <br />
-    <input type="text" name="slika" placeholder="Slika" value="<%= atrakcija.slika%>"/>
+    <input type="text" name="slika" placeholder="Slika" value="<%= atrakcija.slika%>" class="w-100"/>
     <br />
-    <input type="text" name="video" placeholder="Video" value="<%= atrakcija.video%>"/>
+    <input type="text" name="video" placeholder="Video" value="<%= atrakcija.video%>" class="w-100"/>
     <br />
     <small class="text-muted">Izmenite atrakciju...</small>
     <br />
   <input
     type="submit"
     value="Izmeni atrakciju"
-    class="btn btn-outline-primary btn-sm"
+    class="btn btn-outline-light btn-sm w-100"
   />
 </form>
+</div>

@@ -22,13 +22,13 @@
            console.log(sviHoteli);
         </script>
         <div class="col">
-            <div class="card">
+            <div class="card m-2" style="background-color: #BFD1E0; max-width:300px;">
             <img src="<%= smestaj.slika%>" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title"><i class="fas fa-hotel"></i> <%= smestaj.imeSmestaja %></h5>
               <p class="card-text"><i class="fas fa-phone"></i>  <%= smestaj.kontakt%></p>
               <p class="card-text"><i class="fas fa-map-signs"></i>  <%= smestaj.udaljenostOdCentra%>m od centra</p>
-              <a href="/smestaj/<%= smestaj._id%>" class="card-link">Detaljne informacije</a>
+              <a href="/smestaj/<%= smestaj._id%>" class="stretched-link"></a>
             </div>
           </div>
         </div>      
@@ -41,14 +41,14 @@
 <% atrakcije.forEach(function(atrakcija){ %>  
     <%if (atrakcija.planina == planina.imePlanine) { %>
         <div class="col">
-            <div class="card">
+            <div class="card m-2" style="background-color: #BFD1E0; max-width: 300px;">
             <img src="<%= atrakcija.slika%>" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title"><i class="fas fa-hotel"></i> <%= atrakcija.imeAtrakcija %></h5>
               <p class="card-text"><i class="fas fa-phone"></i>  <%= atrakcija.kontakt%></p>
               <p class="card-text"><i class="fas fa-map-signs"></i>  <%= atrakcija.lokacija%></p>
               <p class="card-text"><i class="fas fa-map-money"></i>  <%= atrakcija.cena%></p>
-              <a href="/atrakcija/<%= atrakcija._id%>" class="card-link">Detaljne informacije</a>
+              <a href="/atrakcija/<%= atrakcija._id%>" class="stretched-link"></a>
             </div>
           </div>
         </div>      
@@ -114,3 +114,9 @@
       }
     }
   </script>   
+  <style>
+    .card:hover{
+  filter: brightness(80%);
+  box-shadow: 0 4px 8px 0 #4361ee, 0 6px 20px 0 #eaf4f8;
+}
+  </style>

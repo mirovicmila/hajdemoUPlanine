@@ -73,7 +73,7 @@ Prosečna cena po noći: <%= smestaj.prosecnaCenaPoNoci %>e</h5>
 
 <h3 class="display-4 text-light">Atrakcije u neposrednoj blizini smeštaja</h3>
 <br/>
-<div class="row row-cols-1 row-cols-md-3 g-4 mx-5">
+<div class="row row-cols-1 row-cols-md-3 g-4 mx-5 d-flex flex-wrap">
 <% atrakcije.forEach(function(atrakcija){ %>  
     <%if (atrakcija.planina == smestaj.planina) { %>
       <script>
@@ -83,7 +83,7 @@ Prosečna cena po noći: <%= smestaj.prosecnaCenaPoNoci %>e</h5>
         sveSlike.push("<%=smestaj.slika%>");
      </script>
         <div class="col">
-            <div class="card card1" style="background-color: #c39a99;">
+            <div class="card card1 m-2" style="background-color: #c39a99;max-width: 400px;min-width: 180px;">
             <img src="<%= atrakcija.slika%>" class="card-img-top" alt="...">
             <div class="card-body text-light">
               <h5 class="card-title">

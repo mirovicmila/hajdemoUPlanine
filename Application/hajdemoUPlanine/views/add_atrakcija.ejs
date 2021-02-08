@@ -1,32 +1,38 @@
 <%- include ('./layout') %>
-<h3>Dodaj atrakciju</h3>
-<form action= "/atrakcije/add" method="POST">
+<div class="d-flex flex-row justify-content-around flex-wrap" style="background-color: #FFFFFF;">
+<div class="d-flex flex-column">
+<h3 class="display-4 p-4 mx-4">Dodaj atrakciju</h3>
+<form action= "/atrakcije/add" method="POST" class="mx-auto">
   <input type="hidden" name="id" value="" />
-    <input type="text" name="imeAtrakcije" placeholder="Ime atrakcije" />
+    <input type="text" name="imeAtrakcije" placeholder="Ime atrakcije" required />
     <br />
-    <input type="text" name="opis" placeholder="Opis atrakcije" />
+    <input type="text" name="opis" placeholder="Opis atrakcije" required />
     <br />
-    <input type="text" name="planina" placeholder="Planina na kojoj se nalazi" />
+    <input type="text" name="planina" placeholder="Planina na kojoj se nalazi" required />
     <br />
-    <input type="text" name="cena" placeholder="Cena" />
+    <input type="text" name="cena" placeholder="Cena" required />
     <br />
-    <input type="text" name="kontakt" placeholder="Kontakt" />
+    <input type="text" name="kontakt" placeholder="Kontakt" required />
     <br />
-    <input type="text" name="radnoVreme" placeholder="Radno vreme" />
+    <input type="text" name="radnoVreme" placeholder="Radno vreme" required />
     <br />
-    <input type="text" name="lokacija" placeholder="Lokacija" />
+    <input type="text" name="lokacija" placeholder="Lokacija" required />
     <br />
-    <input type="text" name="slika" placeholder="Slika" />
+    <input type="text" name="slika" placeholder="Slika" required />
     <br />
-    <input type="text" name="video" placeholder="Video" />
+    <input type="text" name="video" placeholder="Video" required />
     <br />
-    <input type="text" name="vebLokacija" placeholder="Veb lokacija" />
+    <input type="text" name="vebLokacija" placeholder="Veb lokacija" required />
     <br />
     <small class="text-muted">Dodajete atrakciju...</small>
     <br />
   <input
     type="submit"
     value="Dodaj atrakciju"
-    class="btn btn-outline-primary btn-sm"
+    class="btn btn-outline-primary btn-sm w-100"
   />
 </form>
+</div>
+<img src="https://cdn.dribbble.com/users/737003/screenshots/2747102/test.gif" class="img-fluid"/>
+</div>
+<div style="min-height: 200px; background-color: #FFFFFF;"></div>
