@@ -1,7 +1,9 @@
 <%- include ('./layout') %>
 <div style="background-color: #20c997;">
     <div class="card bg-dark text-white">
-        <img class="card-img cropped w-100" src="<%= atrakcija.slika %>" alt="Card image" style="filter: brightness(50%);">
+        <% if (atrakcija.slika.includes("http://") || atrakcija.slika.includes("https://")) { %>
+            <img class="card-img cropped w-100" src="<%= atrakcija.slika %>" alt="Card image" style="filter: brightness(50%);">
+        <% } %>
         <div class="card-img-overlay d-flex justify-content-center align-items-center">
           <h5 class="card-title display-4"><%= atrakcija.planina %> - <%= atrakcija.imeAtrakcije %></h5>
         </div>
@@ -51,9 +53,11 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
     <br/>
     </div>
     <br/>
+    <% if (atrakcija.video.includes("http://") || atrakcija.video.includes("https://")) { %>
     <div class="embed-responsive embed-responsive-16by9 w-75 mx-auto">
         <iframe class="embed-responsive-item w-100" src="<%= atrakcija.video %>" allowfullscreen></iframe>
     </div>
+    <% } %>
 <br/>
 <br/>
 <br/>

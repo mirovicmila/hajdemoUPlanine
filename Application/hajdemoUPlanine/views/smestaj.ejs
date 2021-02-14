@@ -2,7 +2,9 @@
 
 <div class="" style="background-color: #ebbab9;">
 <div class="d-flex flex-row " style="background-color: #c39a99;">
-  <img src="<%= smestaj.slika%>">
+  <% if (smestaj.slika.includes("http://") || smestaj.slika.includes("https://")) { %>
+    <img src="<%= smestaj.slika%>">
+  <% } %>
   <h3 class="display-2 align-self-center mx-4 text-light font-weight-bold" style="text-shadow: 1px 1px 2px gray, 0 0 25px gray, 0 0 5px gray;"><%= smestaj.imeSmestaja %></h3>
 </div>
 <br/>
