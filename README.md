@@ -7,5 +7,5 @@ Studentski projekat iz predmeta Napredne baze podataka.
 *Za realizaciju osnovnih CRUD operacija, potrebno je otići na rutu **/admin**, **https://hajdemouplanine.herokuapp.com/admin** odakle se mogu izvršiti*
 
 # Pokretanje aplikacije na standardan način
-Može se ostvariti pomoću nodmeon naredbe.
+Može se ostvariti pomoću nodemon naredbe.
 
